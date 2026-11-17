@@ -70,7 +70,19 @@ LexiSide stores settings, the vocabulary library, and the explanation cache in t
 
 ## Development
 
-`main.js` is a bundled ESBuild output. Source is not included in this repository; issues and feature requests are welcome in the issue tracker.
+The TypeScript sources live in the repository root; tests are in `tests/` and design notes in `docs/`.
+
+```bash
+npm install
+npm run typecheck   # tsc --noEmit
+npm test            # node --test tests/*.test.mjs
+npm run build       # typecheck + ESBuild bundle -> main.js
+npm run dev         # ESBuild watch mode
+```
+
+`npm run build` type-checks the sources and bundles `main.ts` into `main.js` (CommonJS, `obsidian` kept external, minify off). The bundle is committed so the repository always matches the release assets.
+
+Releases are produced by `.github/workflows/release.yml`: pushing a tag equal to `manifest.json`'s `version` rebuilds the bundle, attests the artifacts with `actions/attest-build-provenance`, and publishes `main.js`, `manifest.json`, and `styles.css` as release assets.
 
 ## License
 

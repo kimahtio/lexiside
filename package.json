@@ -1,0 +1,33 @@
+{
+  "name": "lexiside",
+  "version": "1.0.1",
+  "description": "LexiSide - a contextual English vocabulary explorer for Obsidian.",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "npm run typecheck && node esbuild.config.mjs production",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test --test-isolation=none tests/*.test.mjs",
+    "check": "npm run typecheck && npm test && npm run build"
+  },
+  "keywords": [
+    "obsidian",
+    "obsidian-plugin",
+    "english",
+    "dictionary",
+    "vocabulary",
+    "deepseek",
+    "openai-compatible"
+  ],
+  "author": "LexiSide",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "obsidian": "^1.14.4",
+    "typescript": "^5.9.3"
+  }
+}
