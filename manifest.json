@@ -1,0 +1,9 @@
+{
+  "id": "lexiside",
+  "name": "LexiSide",
+  "version": "1.0.0",
+  "minAppVersion": "1.15.0",
+  "description": "Explore contextual English vocabulary with a Pele-powered word map, structured meanings, usage, nuance, and word family.",
+  "author": "LexiSide",
+  "isDesktopOnly": true
+}
