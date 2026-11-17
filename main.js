@@ -3171,7 +3171,6 @@ var LexiSideSettingTab = class extends import_obsidian.PluginSettingTab {
     containerEl.empty();
     containerEl.addClass("lexiside-settings");
     const settings = this.plugin.getSettings();
-    new import_obsidian.Setting(containerEl).setName("LexiSide").setHeading();
     containerEl.createEl("p", {
       cls: "setting-item-description",
       text: "Contextual English explanations in your sidebar."

@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.3 — 2026-11-17
+
+- Removed the redundant "LexiSide" heading from the settings tab; Obsidian already
+  shows the plugin name there, and the community review asks settings headings to
+  avoid repeating it.
+- Releases now include generated release notes.
+
 ## 1.0.2 — 2026-11-17
 
 - The settings tab now uses `Setting.setHeading()` instead of a raw `h2`, as the

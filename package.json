@@ -1,6 +1,6 @@
 {
   "name": "lexiside",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "LexiSide - a contextual English vocabulary explorer for Obsidian.",
   "main": "main.js",
   "type": "module",
