@@ -51,7 +51,7 @@ export class PeleWordMapRenderer implements WordMapRenderer {
 
     container.empty();
     const host = container.createDiv({ cls: "lexiside-map-mermaid" });
-    host.style.visibility = "hidden";
+    host.setCssStyles({ visibility: "hidden" });
 
     const mountFixed = (pele: PeleGlobal): boolean => {
       if (!pele.mount) {
@@ -84,7 +84,7 @@ export class PeleWordMapRenderer implements WordMapRenderer {
       this.clear(container);
       return false;
     } finally {
-      host.style.visibility = "";
+      host.setCssStyles({ visibility: "" });
     }
   }
 

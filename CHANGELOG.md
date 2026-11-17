@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.2 — 2026-11-17
+
+- The settings tab now uses `Setting.setHeading()` instead of a raw `h2`, as the
+  Obsidian review guidelines require.
+- The word map host toggles its measuring visibility through `setCssStyles`
+  rather than assigning `style.visibility` directly.
+- No behavior change: the only other difference is the version field.
+
 ## 1.0.1 — 2026-11-17
 
 - Added the TypeScript sources, tests, build configuration, and documentation to

@@ -29,7 +29,7 @@ export class LexiSideSettingTab extends PluginSettingTab {
     containerEl.addClass("lexiside-settings");
     const settings = this.plugin.getSettings();
 
-    containerEl.createEl("h2", { text: "LexiSide" });
+    new Setting(containerEl).setName("LexiSide").setHeading();
     containerEl.createEl("p", {
       cls: "setting-item-description",
       text: "Contextual English explanations in your sidebar.",

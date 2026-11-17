@@ -3171,7 +3171,7 @@ var LexiSideSettingTab = class extends import_obsidian.PluginSettingTab {
     containerEl.empty();
     containerEl.addClass("lexiside-settings");
     const settings = this.plugin.getSettings();
-    containerEl.createEl("h2", { text: "LexiSide" });
+    new import_obsidian.Setting(containerEl).setName("LexiSide").setHeading();
     containerEl.createEl("p", {
       cls: "setting-item-description",
       text: "Contextual English explanations in your sidebar."
@@ -4282,7 +4282,7 @@ var PeleWordMapRenderer = class {
     }
     container.empty();
     const host = container.createDiv({ cls: "lexiside-map-mermaid" });
-    host.style.visibility = "hidden";
+    host.setCssStyles({ visibility: "hidden" });
     const mountFixed = (pele) => {
       if (!pele.mount) {
         return false;
@@ -4310,7 +4310,7 @@ var PeleWordMapRenderer = class {
       this.clear(container);
       return false;
     } finally {
-      host.style.visibility = "";
+      host.setCssStyles({ visibility: "" });
     }
   }
   clear(container) {
